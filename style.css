@@ -122,8 +122,21 @@ img {
   width: 100%;
   padding: 0 6rem;
   z-index: 100;
+  position: relative;
 }
-
+.toggle__menu--open {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.toggle__menu--close {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  font-size: 24px;
+  top: 2%;
+  left: 5%;
+}
 /* nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
@@ -236,6 +249,62 @@ h4 {
   margin: 0 12rem;
 }
 
+@media screen and (max-width: 1200px) {
+  .features {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .features {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .features__item:nth-child(1) {
+    order: 1;
+  }
+  .features__item:nth-child(2) {
+    order: 2;
+  }
+  .features__item:nth-child(3) {
+    order: 4;
+  }
+  .features__item:nth-child(4) {
+    order: 3;
+  }
+  .features__item:nth-child(5) {
+    order: 5;
+  }
+  .features__item:nth-child(6) {
+    order: 6;
+  }
+  .nav {
+    margin-bottom: 15px;
+  }
+  .nav ul {
+    top: 0;
+    right: 0;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    height: 100vh;
+    padding: 0;
+    width: 75%;
+    transform: translate(100%);
+    transition: 0.5s ease-in-out;
+  }
+  .nav ul.menu--active {
+    transform: translate(0%);
+  }
+  .toggle__menu--open {
+    display: block;
+  }
+  .toggle__menu--close {
+    display: block;
+  }
+}
 .features__img {
   width: 100%;
 }

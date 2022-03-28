@@ -10,6 +10,13 @@
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Bankist | When Banking meets Minimalist</title>
   </head>
@@ -37,7 +44,13 @@
               >Open account</a
             >
           </li>
+          <div class="toggle__menu--close">
+            <i class="fas fa-times"></i>
+          </div>
         </ul>
+        <div class="toggle__menu--open">
+          <i class="fas fa-bars"></i>
+        </div>
       </nav>
 
       <div class="header__title">
@@ -71,9 +84,9 @@
           src="img/digital-lazy.jpg"
           data-src="img/digital.jpg"
           alt="Computer"
-          class="features__img lazy-img"
+          class="features__img lazy-img features__item"
         />
-        <div class="features__feature">
+        <div class="features__feature features__item">
           <div class="features__icon">
             <svg>
               <use xlink:href="img/icons.svg#icon-monitor"></use>
@@ -87,7 +100,7 @@
           </p>
         </div>
 
-        <div class="features__feature">
+        <div class="features__feature features__item">
           <div class="features__icon">
             <svg>
               <use xlink:href="img/icons.svg#icon-trending-up"></use>
@@ -104,16 +117,16 @@
           src="img/grow-lazy.jpg"
           data-src="img/grow.jpg"
           alt="Plant"
-          class="features__img lazy-img"
+          class="features__img lazy-img features__item"
         />
 
         <img
           src="img/card-lazy.jpg"
           data-src="img/card.jpg"
           alt="Credit card"
-          class="features__img lazy-img"
+          class="features__img lazy-img features__item"
         />
-        <div class="features__feature">
+        <div class="features__feature features__item">
           <div class="features__icon">
             <svg>
               <use xlink:href="img/icons.svg#icon-credit-card"></use>

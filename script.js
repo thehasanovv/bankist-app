@@ -1,5 +1,7 @@
 'use strict';
 
+const showMenu = document.querySelector('.toggle__menu--open');
+const closeMenu = document.querySelector('.toggle__menu--close');
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
@@ -11,6 +13,17 @@ const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 
+///////////////////////////////////////
+// Toggle Menu
+const showMenuHandler = function () {
+  document.querySelector('.nav ul').classList.add('menu--active');
+};
+const closeMenuHandler = function () {
+  document.querySelector('.nav ul').classList.remove('menu--active');
+};
+
+showMenu.addEventListener('click', showMenuHandler);
+closeMenu.addEventListener('click', closeMenuHandler);
 ///////////////////////////////////////
 // Modal window
 
@@ -60,6 +73,7 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   if (e.target.classList.contains('nav__link')) {
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('nav ul').classList.remove('menu--active');
   }
 });
 
@@ -150,7 +164,6 @@ const secOptions = {
   root: null,
   threshold: 0.15,
 };
-
 const sectionObserver = new IntersectionObserver(revealSection, secOptions);
 
 allSections.forEach(section => {
