@@ -1,4 +1,4 @@
 # bankist-app
--html
--css
--JavaScript
+html
+css
+JavaScript
