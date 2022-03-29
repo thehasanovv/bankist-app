@@ -778,17 +778,7 @@ h4 {
   .operations__tab-container {
     flex-wrap: wrap;
   }
-  .operations__tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .operations__tab-container > .btn {
-    width: 90px;
-    height: 110px;
-    padding: 6rem 0;
-  }
+
   .operations__content--active {
     grid-template-columns: auto;
   }
@@ -817,5 +807,31 @@ h4 {
   }
   .slider {
     height: 55rem;
+  }
+}
+@media screen and (max-width: 568px) {
+  .operations__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .operations__tab-container {
+    justify-content: space-around;
+  }
+  .operations__tab-container > .btn {
+    max-width: 80px;
+    height: 110px;
+    padding: 4rem 0;
+    justify-content: center;
+  }
+  .operations__tab {
+    margin-right: 0rem;
+  }
+  .testimonial__header {
+    margin-top: 5rem;
+  }
+  .testimonial::before {
+    display: none;
   }
 }
