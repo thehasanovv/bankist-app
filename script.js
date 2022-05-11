@@ -80,8 +80,7 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 ///////////////////////////////////////
 // Tabbed component
 
-tabsContainer.addEventListener('click', function (e)
- {
+tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
   // Guard clause
   if (!clicked) return;
